@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +14,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/dukmovie', function () {
+    return view('movie',[
+        'title' => 'DukMovie',
+        'nama' => 'iron men',
+        'harga' => '8000'
+
+    ]);
+});
+Route::get('/dukresto', function () {
+    return view('resto',[
+        'title' => 'DukResto',
+        'nama' => 'cendol',
+        'harga' => '8000'
+
+    ]);
 });
