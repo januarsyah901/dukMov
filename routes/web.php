@@ -1,7 +1,8 @@
 <?php
 
+use App\Http\Controllers\MakananController;
+use App\Models\Makanan;
 use Illuminate\Support\Facades\Route;
-
 
 /*
 |--------------------------------------------------------------------------
@@ -22,11 +23,4 @@ Route::get('/dukmovie', function () {
 
     ]);
 });
-Route::get('/dukresto', function () {
-    return view('resto',[
-        'title' => 'DukResto',
-        'nama' => 'cendol',
-        'harga' => '8000'
-
-    ]);
-});
+Route::get('/dukresto', [MakananController::class, 'index']);
