@@ -13,4 +13,11 @@ class MakananController extends Controller
             'data' => Makanan::all()
         ]);
     }
+    public function show($slug)
+    {
+        return view('personal', [
+            'title' => 'DukResto',
+            'data' => Makanan::find($slug)
+        ]);
+    }
 }

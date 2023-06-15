@@ -24,3 +24,4 @@ Route::get('/dukmovie', function () {
     ]);
 });
 Route::get('/dukresto', [MakananController::class, 'index']);
+Route::get('/dukresto/{slug}', [MakananController::class, 'show']);
